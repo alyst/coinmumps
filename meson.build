@@ -1,6 +1,6 @@
 project('MUMPS', ['c', 'fortran'], version:'5.1.2')
 
-LAPACK_dep = subproject('LAPACK').get_variable('coinlapack_dep')
+LAPACK_dep = subproject('coinlapack').get_variable('coinlapack_dep')
 
 add_project_arguments('-DAdd_', '-DMUMPS_ARITH=MUMPS_ARITH_d', language: 'c')
 # FIXME other fortran standard libraries
